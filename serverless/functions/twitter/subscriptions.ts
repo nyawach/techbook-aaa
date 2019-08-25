@@ -3,6 +3,9 @@ import { APIGatewayProxyHandler } from "aws-lambda"
 import { createClient, createApp } from "@/helpers/twitter"
 import { addSubscriptions, listSubscriptions } from "@/lib/api"
 
+/**
+ * Add subscription to Account Activity API
+ */
 export const add: APIGatewayProxyHandler = async () => {
   const app = createClient()
   const body = await addSubscriptions(app)
@@ -12,6 +15,9 @@ export const add: APIGatewayProxyHandler = async () => {
   };
 }
 
+/**
+ * List all Subscrioptions
+ */
 export const list: APIGatewayProxyHandler = async () => {
   const app = createApp()
   let body = null

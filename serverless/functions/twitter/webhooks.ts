@@ -3,6 +3,9 @@ import { APIGatewayProxyHandler } from "aws-lambda"
 import { createClient } from "@/helpers/twitter"
 import { createWebhook, getWebhooks } from "@/lib/api"
 
+/**
+ * Add webhook url to Twitter Account Activity API
+ */
 export const create: APIGatewayProxyHandler = async (event) => {
   const app = createClient()
   const requestBody = JSON.parse(event.body)
@@ -14,6 +17,9 @@ export const create: APIGatewayProxyHandler = async (event) => {
   };
 }
 
+/**
+ * Get current connected webhook URLs
+ */
 export const get: APIGatewayProxyHandler = async () => {
   const app = createClient()
   const body = await getWebhooks(app)

@@ -7,6 +7,9 @@ const {
   TWITTER_ACCESS_TOKEN_SECRET,
 } = process.env
 
+/**
+ * Create Twitter app as application
+ */
 export const createApp = () =>
   new Twit({
     consumer_key: TWITTER_CONSUMER_KEY,
@@ -16,6 +19,9 @@ export const createApp = () =>
     app_only_auth: true,
   })
 
+/**
+ * Create Twitter app as client
+ */
 export const createClient = () =>
   new Twit({
     consumer_key: TWITTER_CONSUMER_KEY,
