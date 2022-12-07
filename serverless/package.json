@@ -9,7 +9,7 @@
   "dependencies": {
     "@types/twit": "^2.2.22",
     "crypto": "^1.0.1",
-    "serverless": "^1.50.0",
+    "serverless": "^3.25.1",
     "source-map-support": "^0.5.10",
     "twit": "^2.2.11",
     "webpack-node-externals": "^1.7.2"
